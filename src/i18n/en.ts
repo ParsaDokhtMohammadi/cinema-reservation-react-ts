@@ -324,6 +324,7 @@ export const en = {
     disclaimer:
       'A demonstration build. No real tickets are sold and no payment is taken. Poster artwork belongs to its respective rights holders.',
     builtWith: 'Built with React, TypeScript and Tailwind CSS.',
+    developedBy: 'Developed by',
   },
 
   errors: {

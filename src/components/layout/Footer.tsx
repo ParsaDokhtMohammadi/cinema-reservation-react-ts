@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { CINEMAS } from '../../data/cinemas';
 import { MOVIES } from '../../data/movies';
 import { useLocale } from '../../hooks/useLocale';
-import { ClockIcon, MapPinIcon, TicketIcon } from '../ui/Icon';
+import { ClockIcon, GithubIcon, MapPinIcon, TicketIcon } from '../ui/Icon';
 
 const EXPLORE_LINKS = [
   { to: '/movies', labelKey: 'nav.movies' },
@@ -88,6 +88,19 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-ink-200 pt-6 text-xs leading-relaxed text-ink-400 dark:border-ink-800">
+          <p className="text-sm font-semibold text-ink-600 dark:text-ink-300">
+            {t('footer.developedBy')}{' '}
+            <a
+              href="https://github.com/ParsaDokhtMohammadi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 font-bold text-brand-600 underline-offset-4 transition-colors hover:text-brand-700 hover:underline dark:text-brand-400 dark:hover:text-brand-300"
+            >
+              {/* Latin name stays LTR even inside the Persian layout. */}
+              <span dir="ltr">Parsa Dokht Mohammadi</span>
+              <GithubIcon className="size-4 shrink-0" />
+            </a>
+          </p>
           <p>{t('footer.rights', { year })}</p>
           <p className="max-w-3xl">{t('footer.disclaimer')}</p>
         </div>
